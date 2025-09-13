@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SDEV1150-OE01-1251</title>
+    </head>
+    <body>
+        <h1 style="color: blue;">This is the third page of showing JavaScript with Script tags on the same page itself.</h1>
+        <h2 style="background-color: aqua;">SDEV1150-OE01-1251</h2>
+        <h3>OE01</h3>
+        <h4>1251</h4>
+        <p>This paragraph is just a demo to show  the font size differences between heading and a paragraph tag.</p>
+        <p id="demos" style="font-size: 20px;">This is paragraph which is about to change using JavaScript</p>
+        <button type="button" onclick="sdev();">Click here</button>
+
+        <script>
+            function sdev()
+            {
+                document.getElementById("demos").innerHTML="This is now a changed paragraph"
+            }
+        </script>
+    
+    </body>
