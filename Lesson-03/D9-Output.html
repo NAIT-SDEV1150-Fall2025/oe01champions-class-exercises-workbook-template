@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SDEV1150-OE01-1251</title>
+    </head>
+<body>
+
+<h1 style="color: rgb(7, 7, 110);">This is the ninth page that explain JavaScript output printinig options.</h1>
+
+<h2>There are different types of JavaScript write options to display the content:</h2>
+<div>
+<h3>
+<ul>
+    <li>innerHTML and innerText</li>
+    <li>window.alert() or alert()</li>
+    <li>console.log</li>
+    <li>document.write()</li>
+</ul>
+</h3>
+</div>
+
+
+<!-- Your comment goes here -->
+
+<!-- In JavaScript, instructions are called statements and are separated by semicolons (;).
+ A semicolon is not necessary after a statement if it is written on its own line.
+ But if more than one statement on a line is desired, then they must be separated by semicolons.
+  -->
+
+
+<div>
+    <p>Demo of INNERHTML tag:  <span id="innerHT"></span></p>
+    <br>
+    <p>Demo of INNERTEXT tag: <span id="innerTX"></span></p>
+    <br>
+    <p>Demo of Window alert is: <span id="win-alert"></span></p>
+    <br>
+    <p>console.log is used for debugging your code in the console. Here's the Demo for using console.log is: <span id="console"></span></p>
+    <br>
+    <p>Document.Write after the page load: <span id="dwrite-after-load"></span></p>
+    <button type="button" onclick="afterload()">Click Here</button>
+    <br>
+    <p>Document.Write before page load: <span id="dwrite-before-load"></span></p>
+</div>
+<script src="./docwrite.js"></script>
+<script>
+     {
+        document.getElementById("innerHT").innerHTML = "<h2>SDEV1150</h2>"
+     }
+</script>
+<script>
+     {
+        document.getElementById("innerTX").innerText = "<h2>SDEV1150</h2>"
+     }
+</script>
+<script>
+     {
+        //window.alert("Addition of two numbers is being displayed as alert on your window screen that is: "+ (10+20))
+        //alert("Addition of two numbers is being displayed as alert on your window screen that is: "+ (10+20))
+     }
+</script>
+<script>
+    {
+        let fname="SDEV"
+        let lname="1150"
+        document.getElementById("console").innerHTML=fname+lname
+        console.log("Full name is executed on web page and that is: "+(fname+lname))
+    }
+</script>
+<script>
+    {
+        let fname="SDEV"
+        let lname="1150"
+        document.getElementById("dwrite-before-load").innerHTML=fname+lname
+        document.write("Full name is executed on web page and that is: "+(fname+lname))
+    }
+</script>
+
+    </body>
+</html>
+

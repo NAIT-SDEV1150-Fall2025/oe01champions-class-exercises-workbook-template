@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SDEV1150-OE01-1251</title>
+    </head>
+<body>
+    <div>
+    <h2>This section tells us about LET and CONST keywords used to declare the variables.</h2>
+    <h3>LET keyword <br>Variables declared with LET have Block Scope, and Variables declared with LET cannot be Redeclared in the same scope</h3>
+
+
+    <p>This is an example that is showing the block scope of LET keyword <span id="letscope"></span></p>
+
+    </div>
+
+    <div>
+       <h3>CONST keyword <br>CONSTANTS declared with CONST have Block Scope, and CONSTANTS declared with CONST cannot be Redeclared as well as REASSIGNED in the same scope</h3> 
+        <p>This is an example of CONSTANTS (<span id="constant-1"></span>)</p>
+    </div>
+
+    <div>
+        <p>Always declare a variable with const when you know that the value should not be changed. <b>i.e. reference of element should not change.</b></p>
+        <br>
+        <p>Use const when you declare:</p>
+        <ul>
+            <li>A new array (Array Reference: Base address and indexing): An array is a type of object, which allows you to store multiple values. They are a bit like lists(Lists of values).</li>
+            <li>Objects (Key and values)</li>
+        </ul>
+        <b>Array</b>
+        <p>Arrays can hold any type of variable. The values of the array won't be converted to a single data type or anything like that. JavaScript simply stores all the variables with their own data type and value in the array.</p>
+        <p>Arrays are zero-indexed. So, the positional value of the last element in the array will be one lesser than the total number of elements.</p>
+        <p>Arrays have a very useful built-in property: <b>length.</b> This will return the number of values that the array has:</p>
+
+        <p> Lets count and get all main elements of this course and those are: <b><span id="array-reference"></span></b></p>
+        </div>
+
+    <div>
+        <p> Lets change the elements of array to demonstrate that CONST ARRAY REFERENCE: <b><span id="change-array"></span></b></p>
+
+    </div>
+
+    <div>
+        <b>Objects</b>
+        <p>An object is a chance to group multiple variables into one. This is done with curly brackets: { and }. Objects can have multiple KEYS(Properties) and relevant values.</p>
+        <p> Lets see how objects can be defined and used using ARRAY to demonstrate that CONST ARRAY REFERENCE:
+        <br>
+        Lets get all course details here:  <b><span id="object-array"></span></b></p>
+
+
+    </div>
+
+
+    
+
+    <script>
+     {
+        let x=20.25
+        {
+            let x=21.25
+            let y= 22.25
+        }
+        //let x=25;
+        x=25;
+        document.getElementById("letscope").innerHTML = x;
+     }
+    </script>
+     <script>
+     {
+        try
+        {
+
+        
+        const x = 20.25
+        {
+            let x=21.25
+            //const x=22.25
+            let y= 22.25
+        }
+        //const x= 30
+        //x=25;
+        document.getElementById("constant-1").innerHTML = x;
+        }
+        catch
+        {
+            document.getElementById("constant-1").innerHTML=" You landed to the JavaScript error."
+        }
+     }
+    </script>
+    <script>
+        try
+        {
+            const elements=["HTML"," CSS"," JavaScript"," NodeJS"," GitHub", 10, true]
+            document.getElementById("array-reference").innerHTML=elements + " & Size of array is: "+ elements.length +". The type of this array is: "+ typeof elements;
+            console.log(elements[0]+elements[1]+elements[2]);
+        }
+        catch
+        {
+            document.getElementById("array-reference").innerHTML="Your code have error in execution"
+        }
+    </script>
+
+    <script>
+        try
+        {
+            const change_elements=["HTML"," CSS"," JavaScript"," NodeJS"," GitHub", 10, true]
+                //change_elements=["HTML5"," Latest CSS"," JavaScript Newer Functions"," Node registry"," GitHub"]
+                change_elements[0]="HTML5"
+            document.getElementById("change-array").innerHTML=change_elements
+        }
+        catch
+        {
+            document.getElementById("change-array").innerHTML="Your code have error in execution"
+        }
+    </script>
+
+    <script>
+        try
+        {
+           const obj={college:"NAITT", school:"IT and Business Analysis", department:"DMIT", clas:"SDEV1150"}
+            //document.getElementById("object-array").innerHTML=obj
+            document.getElementById("object-array").innerHTML="College name is "+ obj.college +", "+"School name is: "+ obj.school +", "+"Department name is "+ obj.department +", "+"Class name is " +" "+ obj.clas
+            
+            //obj.college="NAIT"            
+            //document.getElementById("object-array").innerHTML="College name is "+ obj.college +" "+"School name is "+ obj.school +" "+"Department name is "+ obj.department +" "+"Class name is " +" "+ obj.clas
+
+        }
+        catch
+        {
+            document.getElementById("object-array").innerHTML="Your code have error in execution"
+        }
+    </script>
+
+</body>
+</html>
