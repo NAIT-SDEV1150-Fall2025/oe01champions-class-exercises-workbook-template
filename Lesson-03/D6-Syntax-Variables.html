@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SDEV1150-OE01-1251</title>
+    </head>
+<body>
+
+<h1 style="color: blue;">This is the SIXTH page that explain the concept of VARIABLES in JavaScript.</h1>
+<p> Variables can be called as containers that can store the data values in it. Variables must be identified with unique names.
+<h2> JavaScript is case sensitive. SO, please be very carefull when defines the variable/function names and uses those at various places of program.</h2>
+
+<h3>JavaScript Identifiers</h3>
+<p>Identifiers are used to name variables and keywords, and functions.
+<p>The rules for defining legal names are the same as most programming languages and those are: </p>
+<h3> A name can have letter (A-Z or a-z), A number (0-9), A dollar sign ($) or An underscore (_).</h3>
+
+<p>****Numbers are not allowed as the first character in names. Because, this way JavaScript can easily distinguish identifiers from numbers.</p>
+
+<div>
+    <h3>JavaScript keywords - that tells what action to be performed. In other terms, declaration of variables</h3>
+    <ul>
+        <li>let</li>
+        <li>const</li>
+        <li>Var (used in old JavaScript and not recommended)</li>
+        <li>automatically (used in old JavaScript and not recommended) </li>
+    </ul>
+</div>
+
+<p>After you declared your variable, you must also let your machine know that what type of data is going to be stored in these variables/containers.</p>
+
+<div>
+    <h3>JavaScript DATA TYPES - A JavaScript variable can hold 8 types of data</h3>
+    <ul>
+        <li>String - A text of characters enclosed in quotes (double or single quotes)</li>
+        <li>NUMBER - A number representing a mathematical value, It has min and max values, when required value does not fit the max value then use BIGINT</li>
+        <li>BIGINT - A number representing a large integer</li>
+        <li>BOOLEAN - A data type representing true or false</li>
+        <li>OBJECT</li>
+        <li>UNDEFINED - A variable with no assigned value</li>
+        <li>NULL</li>
+        <li>SYMBOL</li>
+    </ul>
+</div>
+<div>
+    <b>STRINGS</b>
+    <p>A string is used to store a text value. It is a sequence of characters. There are different ways to declare a string: <b>Double quotes </b><b>Single quotes </b>
+<b>Backticks: </b> special template strings in which you can use variables directly</p>
+<p>The main difference between single quotes and double quotes is that you can use single quotes as literal characters in double-quoted strings, and vice versa. If you declare a string with single quotes, the string will end as soon as a second quote is detected, even if it's in the middle of a word. However, if you declare the string using double quotes, it will not end the string as soon as it hits the single quote, because it is looking for another double quote.</p>
+<p>In a string using backticks, you can point to variables and the variable's value will be substituted into the line.</p>
+<p><b>ESCAPE CHARACTERs</b></p>
+<p>Say we want to have double quotes, single quotes, and backticks in our string. We would have a problem, as this cannot be done with just the ingredients we have now. There is a special character that can be used to tell JavaScript, "do not take the next character as you normally would." This is the escape character, <b>a backslash.</b></p>
+</div>
+<div>
+    <b>NUMBER AND BIGINT</b>
+    <P>The limits of the number data type are between 2 (power 53)-1 and -(2(power 53)-1). In case you were to need a bigger (or smaller) number, BigInt comes into play. A BigInt data type can be recognized by the postfix n:</P>
+</div>
+<div>
+    <b>SYMBOL</b>
+    <p>Symbol
+Symbol is a brand new data type introduced in ES6 (we mentioned ECMA Script 6, or ES6, in Chapter 1, Getting Started with JavaScript). Symbol can be used when it is important that variables are not equal, even though their value and type are the same (in this case, they would both be of the symbol type).</p>
+</div>
+
+<div>
+    <b>DATA CONVERSION METHODS</b>
+    <p>String (), Number(), Boolean()</p>
+</div>
+<div>
+    <h2>This section shows various examples of VARIABLE declaration with or without data types.</h2>
+    <p>This is an example of UNDEFINED <span id="undefined"></span></p>
+    <p>This is an example of STRING --> <span id="string"></span></p>
+    <p>This is an example of STRING with no values --> <span id="string-UNK"></span></p>
+    <p> String ERROR because of SINGLE QUOTES: (<span id="squote"></span>) If no data appeared in brackets because of error, then, this error can be rectified using BACK SLASH</p>
+    <p> String ERROR because of DOUBLE QUOTES: (<span id="dquote"></span>) If no data appeared in brackets because of error, then, this error can be rectified using BACK SLASH</p>
+    <p> String with BACK-TICKS: <span id="backtick"></span></p>
+    <p>This is an example of NUMBER <span id="number"></span></p>
+    <p>This is an example of BIGINT <span id="BIGINT"></span></p>
+    <p>Results of adding BIGINT and NUMBER data type: (<span id="bigint-number"></span>)</p>
+    <p> SYMBOL DataType: <span id="sym"></span></p>
+    <p>Data Conversion is happening here, Please have a quick walkthrough session of SCRIPT to understand it. <span id="conversion"></span></p>
+    <p>Another Data Conversion is --> <span id="conversion1"></span></p>
+
+</div>
+
+<div>
+    <b>Let's tease your brain a little bit. What do you think this code snippet will log?</b>
+    <p>let nr1 = 2;<br>
+let nr2 = "2";<br>
+console.log(nr1 + Number(nr2));</p>
+</div>
+
+<script src="./symbols.js"></script>
+<script>
+     {
+        let colour;
+        document.getElementById("undefined").innerHTML = colour;
+     }
+</script>
+<script>
+     {
+        let firstName='SDEV'
+        let lastName='1150'
+        document.getElementById("string").innerHTML = firstName+""+lastName;
+     }
+</script>
+<script>
+     {
+        let name=""; 
+        document.getElementById("string-UNK").innerHTML = name;
+        //typeof name;
+     }
+</script>
+<script>
+     {
+        let funActivity= 'Let's learn JavaScript';
+        document.getElementById("squote").innerHTML = funActivity;
+        //typeof name;
+     }
+</script>
+<script>
+     {
+        let funActivity1= "Do you want to learn JavaScript? "Yes!"";
+        document.getElementById("dquote").innerHTML = funActivity1;
+        //typeof name;
+     }
+</script>
+<script>
+     {
+        let language= "JavaScript";
+        let message= `Let's learn ${language}`
+        //let message= "Let's learn ${language}";
+        document.getElementById("backtick").innerHTML = message;
+        //typeof name;
+     }
+</script>
+
+<script>
+    {
+        let x=10.25
+        let y=15
+        document.getElementById("number").innerHTML=x +","+y
+
+    }
+</script>
+<script>
+    {
+        let x=90071992547409920n
+        let y=19
+        document.getElementById("BIGINT").innerHTML=x +","+y
+    }
+</script>
+<script>
+    {
+        let x=90071992547409920n
+        let y=19
+        try{
+            document.getElementById("bigint-number").innerHTML=x+y;
+        }
+        catch
+        {
+            document.getElementById("bigint-number").innerHTML="Error because two BIGINT and NUMBER types can not be mixed."
+        }
+        
+
+    }
+</script>
+<script>
+    {
+        let nrToStr = 6;
+        nrToStr = String(nrToStr);
+        console.log(nrToStr, typeof nrToStr);
+ 
+        let strToNr = "12";
+        strToNr = Number(strToNr);
+        console.log(strToNr, typeof strToNr);
+ 
+        let strToBool = "any string will return true";
+        strToBool = Boolean(strToBool);
+        console.log(strToBool, typeof strToBool);
+
+        document.getElementById("conversion").innerHTML="Type of variable "+nrToStr+" is " + typeof nrToStr + " & Type of variable "+strToNr+" is "+typeof strToNr +" & Type of "+strToBool+" is "+ typeof strToBool
+    }
+</script>
+<script>
+    {
+        let strToNr2 = "hello";
+        strToNr2 = Number(strToNr2);
+        console.log(strToNr2, typeof strToNr2);
+        document.getElementById("conversion1").innerHTML= "Value retreived after converting STRING to NUMBER is: "+strToNr2+". This NaN stands for (not a number) & Type of this variable is retrived as "+ typeof strToNr2;
+    }
+</script>
+
+    </body>
+</html>
