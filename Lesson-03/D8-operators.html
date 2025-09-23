@@ -19,11 +19,24 @@
     <li>Exponentiation</li>
     <li>Division</li>
     <li>Modulus Division</li>
+    <li>Increment operator (++)</li>
+    <li>Decrement operator (--)</li>
 </ul>
 
-<p>Assignment Operators</p>
-<p>Comparison Operators</p>
-<p>Logical Operators</p>
+<p>Assignment Operators (=)</p>
+<p>Comparison Operators (= = =), (>), (<), (>=), (<=), (!=)</p>
+<p>Logical Operators - AND (&&), OR(||) and NOT(!(X>Y))</p>
+</div>
+
+<div>
+    <p><b>Operand,</b> are the subjects to the operators. So, if we say x + y, x and y are operands.</p>
+    <p>Unary operators: If we only need one operand for the operators</p>
+    <p>Binary operators: Two operands</p>
+    <p>Ternary operators: Three operands</p>
+</div>
+<div>
+    <p>Increment and Decrement operators are known as unary operators. x++ or ++x</p>
+    <p><b>Question:</b>Increment and Decrement operators are known as unary operators. Then, what operators can be considered as binary operators?</p>
 </div>
 
 
@@ -44,6 +57,9 @@
     <p>Division of two numbers is: <span id="division"></span></p>
     <p>Modulas Division of two numbers is: <span id="Modulas"></span></p>
 
+</div>
+<div>
+    <p>Other operators for DEMO, Result are displayed here: <span id="other-operators"></span></p>
 </div>
     
 <script>
@@ -97,6 +113,22 @@
         let x=30
         let y=4
         document.getElementById("Modulas").innerHTML=x%y
+    }
+</script>
+<script>
+    {
+        
+        let x=5
+        let y=5
+        let z=10
+        if(x=y)
+        {
+        document.getElementById("other-operators").innerHTML= --x;
+        }
+        else
+        {
+        document.getElementById("other-operators").innerHTML="X is not the smallest"
+        }
     }
 </script>
     </body>

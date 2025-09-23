@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SDEV1150-Logical Statements</title>
+    </head>
+    <body>
+        <div>
+            <h1>Logical Statements</h1>
+            <p>We will be dealing with logical statements. Logical statements allow us to make multiple paths in our code. Depending on the outcome of a certain expression, we will follow one code path or another.</p>
+        </div>
+        
+        <div>
+            <h2>IF-ELSE Statements</h2>
+            <p>There are different logic statements, and We will start with <b>if</b> and <b>if else statements.</b></p>
+            <p>We can make decisions in our code using if and if else statements. It is very much like this template:</p>
+            <p><i><u>if</u> *some condition is true*, <u>Then</u> *a certain action will happen*, <u>else</u> *another action will happen*</i></p>
+            <p>ELSE block is optional. Why? Because, expression given in brackets of IF statement will be first executed and translated to a BOOLEAN i.e. either TRUE or FALSE.</p>
+            <p>If, BOOLEAN is FALSE, then Else block will be executed.</p>
+            <p>if(expression)</p>
+            <p>{ <p>code associated with the "IF block" is executed and if the expression is true, control will exit the complete IF/ELSE block.</p>}</p>
+            <p>else</p>
+            <p>{ <p>this code will only be executed if the expression is false.</p>}</p>
+        </div>
+        <div>
+            <h3>PROMPT() Operator</h3>
+            <p>SYNTAX: let var= prompt("Expression")</p>
+            <p>Let's find the ticket price as per your age. Since you entered your age as <b><span id="age1"></span></b>. So, ticket price of the movie for you is <span id="age2"></span></p>
+            <button type="button" onclick="prompt1()">Click here</button>
+        </div>
+        <div>
+            <h3>CONFIRM() Operator</h3>
+            <p>SYNTAX: let var= confirm("Expression")</p>
+            <p> Lets calculate the ticket price again with DISCOUNT, IFF you are member. You entered your age as <b><span id="age11"></span></b>. So, ticket price of the movie for you is <span id="age21"></span></p>
+            <button type="button" onclick="prompt2()">Calculate Discounted Price</button>
+        </div>
+        <div>
+            <h3>Ternary Operator</h3>
+            <p> It has three operands.</p>
+            <p>Declaration: operand1 ? operand2 : operand3;</p>
+            <p>expression ? statement for true : statement associated with false;</p>
+            <p>Calculate FINAL PRICE using Ternary operator, When  price is $10 and discount is 20%. Thus, <span id="ternary"></span></p>
+        </div>
+
+        <div>
+            <h2>SWITCH Statements</h2>
+            <p>If else statements are great for evaluating Boolean conditions. There are many things you can do with them, but in some cases, it is better to replace them with a switch statement. This is especially the case when evaluating more than four or five values.</p>
+            <p>Syntax:</p>
+            <p>switch(expression) { <br>case value1:<br>//statement to execute<br> break;<br>case value2:<br>//statement to execute<br> break;<br>}</p>
+            <p>Demo of Switch statements, Click the button and enter your day to check your schedule.</p>
+            <button type="button" onclick="switchstatement()">Check your Schedule</button>
+        </div>
+
+
+
+        <!--Here is the JavaScript that is being used in this page.-->
+        <script src="./src/main.js"></script>
+        <p id="demo"></p>
+
+        <script>
+        // Using the ternary operator
+        let price = 10;
+        let isMember = true;
+        let discount = isMember ? 0.2 : 0;
+        let total = 10 - (price * discount)
+
+        document.getElementById("ternary").innerHTML = "The final price is " + total;
+        </script>
+    </body>
