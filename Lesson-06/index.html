@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson-06</title>
+  </head>
+  <body>
+    <header>
+        <section class="hero">
+          <h1 id="page-title">Lesson-06, A dynamic content</h1>
+          <ul>
+            <li>An element node, div, li, p tags</li>
+            <li>A Text node, that includes whitespace</li>
+            <li>A comment node</li>
+          </ul>
+        </section>
+    </header>
+    <main>
+            <section>
+                <h2>Featured List</h2>
+                <ul id="feature-list">
+                    <li class="feature">Fast</li>
+                    <li class="feature">Accessible</li>
+                    <li class="feature">Reliable</li>
+                </ul>
+                <button type="button" onclick="addList()">Adding new list item</button><br><br>
+                <button type="button" onclick="setTimeout(addList, 3000)">Adding item after 3 seconds</button>
+                <button type="button" onclick="allListItems()">Update All List Items</button>
+            </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./src/main.js"></script>
+  </body>
+</html>

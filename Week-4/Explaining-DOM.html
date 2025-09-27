@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML Manipulation using DOM</title>
+        <script src="./dom.js"></script>
+        <style>
+            .democlass
+            {
+                color: red;
+            }
+        </style>
+    </head>
+<body>
+        <div class="main"> 
+            <div>
+                <h1>The Document Object Model</h1>
+                <p>DOM is a way of displaying the structure of an HTML document as a logical tree. This is possible because of the very important rule that inner elements need to be closed before outer elements get closed..</p>
+                <p>The DOM contains the HTML elements on the web page. With JavaScript, we can select and manipulate parts of the DOM. This leads to interactive web pages instead of static ones. So, long story short, being able to work with the DOM means you're able to create interactive web pages!</p>
+            </div>
+            <div>
+                <h2>HTML Elements</h2>
+                <p>HTML consists of words between (<)angle brackets(>), or elements. Any element that gets opened needs to be closed. We open with (<)elementname(>) and we close with (<)/elementname(>).</p>
+                <p> Elements can contain inner elements. Elements can only be closed if all inner elements have been closed. So, you must always close the inner elements before closing the outer element. We call inner elements child elements, and outer elements parent elements.</p>
+                <p>HTML Elements (tags) that can be used are: script, p, heading(h1,h2,h3,h4,h5,h6), div, span, button, table, th, tr, td, ul, ol, li, form, input, a, br TAGS</p>
+            </div>
+            <div>
+                <h2>HTML attributes</h2>
+                <p>HTML Attributes influence the HTML element they are specified on. They exist inside the element they are specified on and are assigned a value using an equal sign.</p>
+            </div>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Attribute name</th>
+                        <th>Description</th>
+                        <th>Can be used on which element?</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>Gives an element a unique ID, such as age.</td>
+                        <td>All of them</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Used to give a custom name to an element.</td>
+                        <td>input, button, form, and quite a few we haven't seen yet</td>
+                    </tr>
+                    <tr>
+                        <td>Class</td>
+                        <td>Special metadata that can be added to an element. This can result in a certain layout or JavaScript manipulation.</td>
+                        <td>Almost all of them inside body</td>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td>Sets the initial value of the element it is added to.</td>
+                        <td>button, input, li, and a few more</td>
+                    </tr>
+                    <tr>
+                        <td>style</td>
+                        <td>Gives a specified layout to the HTML element it is added to.</td>
+                        <td>All of them</td>
+                    </tr>
+                </table>
+                <br>
+                <a href="https://learning.oreilly.com/library/view/javascript-from-beginner" target="_blank">Go to Chapter-9 of your JavaScipt book for more details</a>
+            </div>
+            <div>
+                <h2>The BOM (Browser Object Model)</h2>
+                <p>The BOM, sometimes also called the window browser object, is the amazing "magic" element that makes it possible for your JavaScript code to communicate with the browser. The window object contains all the properties required to represent the window of the browser, so for example, the size of the window</p>
+                <p>We can access the HTML elements and the JavaScript if we go to the inspection panel of our browser by pressing F12 or by doing right click on element or on page and then choose 'inpect element'</p>
+                <p>We can play with browser objects using 'CONSOLE' tab which is placed next to the 'Elements' tab. Use console.dir() method to access browser objects like 'window', 'history', 'location'</p>
+            </div>
+            
+            <div>
+                <p><b>Practice Exercise</b></p>
+            <p>Please write href properties of the current file using 'location object' into the console.</p>
+            </div>
+
+            <div class="DOM_Info" id="dom_information">
+                <h2>The DOM</h2>
+                <img src="./images/dom-image.png">
+                <div>
+                    <p>The DOM of a real web page wouldn't fit on a page in this book. But if you can draw trees like these in your head, it will be of great help soon.</p>
+                    <h3>Additional DOM properties</h3>
+                    <p>We can inspect the DOM in a similar fashion as we did the others by passing the 'document' or 'window.document'object in console.dir() OR as a STANDALONE object.</p>
+                    <b> we can see the 'document' object, which represents the DOM:</b>
+                    <p>We have now got the basics of the BOM down, and its child object that is most relevant to us right now, <i>the DOM.</i></p>
+                    <p><ui>For us, it is most relevant to look at the HTML elements, and, The DOM contains all the HTML elements of a web page. This is why DOM is important concept to understand for all front end developers.</ui></p>
+                    <div>
+                        <h3>Selecting page elements</h3>
+                        <p>The document object contains many properties and methods. In order to work with elements on the page, you'll first have to find them. If you need to change the value of a certain paragraph, you'll have to grab this paragraph first. We call this selecting the paragraph. After selecting, we can start changing it.</p>
+                        <p>getElementbyId, getElementByClassName, getElementByTagName</p>
+                        <p>Furthermore, To select page elements to use within your JavaScript code and in order to manipulate elements, you can use either the <b>querySelector()</b> or <b>querySelectorAll()</b> method. Both of these can be used to select page elements either by tag name, ID, or class.</p>
+                        <p>The document.querySelector() method will return the first element within the document that matches the specified selectors. If no matching page elements are found, the result null is returned.</p>
+                        <p>The querySelectorAll() method will return a static NodeList, which represents a list of the document's elements that match the specified group of selectors. We will demonstrate the usage of both querySelector() and querySelectorAll() with the following HTML snippet:</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="demo">
+                <h3>Demos for querySelector()</h3>
+                <p>Change the colour using id in querySelector <button type="button" onclick="demo1()">Click to change</button></p>
+                <p>Change the colour back to original colour using Class Name in querySelector <button type="button" onclick="demo2()">Click to change</button></p>
+                <p>Change the colour to AQUA colour using (p) tag in querySelector <button type="button" onclick="demo3()">Click to change</button></p>
+                <h3>Demos for querySelectorAll ()</h3>
+                <p>Change the colour using id in querySelector <button type="button" onclick="demo4()">Click to change</button></p>
+                <p>Change the colour back to original colour using Class Name in querySelector <button type="button" onclick="demo5()">Click to change</button></p>
+                <p>Calculate the number of (p) tags using querySelectorAll and the total is: <span id="count1"></span> <button type="button" onclick="demo6()">Click to change</button></p>
+                <p>Change the colour using querySelectorAll  <button type="button" onclick="demo7()">Click to change</button></p>
+                <p>Get the attributes of an HTML element and that is: <span id="attribute"> </span><button type="button" onclick="demo8()">Click to get attribute value</button></p>
+                <p>Set the attributes of one of the HTML element and change its colour to red: <span id="s-attribute"> </span><button type="button" onclick="demo9()">Click to get attribute value</button></p>
+                <p>Another example of setting attribute using reusable function. <button type="button" onclick="setAttr('#title','class','heading-class')">Click to Set Attribute</button></p>
+                <p>One more example of setting attribute using reusable function to change the existing IMAGE. <button type="button" onclick="setAttr('.assets','src','./images/manipulation.jpg')">Click to change IMAGE</button></p>
+            </div>
+        </div>
+    </body>
+</html>
