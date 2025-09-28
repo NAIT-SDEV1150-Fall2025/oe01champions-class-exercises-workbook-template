@@ -8,7 +8,7 @@ function addList()
 }
 function allListItems()
 {
-  const features=document.querySelector('.feature')
+  const features=document.querySelectorAll('.feature')
   features.forEach((li, idx)=>{
     li.textContent=`${idx+1}.${li.textContent}`;
   });
