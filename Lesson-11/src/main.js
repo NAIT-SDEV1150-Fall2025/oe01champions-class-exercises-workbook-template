@@ -46,9 +46,11 @@ form.addEventListener('reset', () => {
 });
 
 // 1. Add validation logic to the form on 'input' events
+
 form.addEventListener('input',(event)=>{
 const target = event.target;
-const error = document.querySelector('.error-msg');
+
+const errorMessage = document.querySelector('.error-msg');
 
 // 1.1 custom validation for fullName (must contain two words)
 if(target.name === 'fullName')
@@ -57,13 +59,15 @@ if(target.name === 'fullName')
   if(nameParts.length < 2){
     target.classList.add('error');
     target.setCustomValidity('Full Name must contain atleast two words.');
-    error.textContent = 'Please fill the fullName field.'
+    errorMessage.textContent = 'Please fill the fullName field.'
   }else {
     target.classList.remove('error');
     target.setCustomValidity('');
+    errorMessage.textContent = '';
   }
 }
 
+// 1.2 custom validation for bio (minimum length)
 if(target.name === 'bio'){
   if(target.value.trim().length < 40){
     target.setCustomValidity('Bio must be atleast 40 characters long');
@@ -73,13 +77,46 @@ if(target.name === 'bio'){
   }
 }
 
-})
-
-
-
-// 1.2 custom validation for bio (minimum length)
-
 // 1.3 custom validation for email (basic '@' symbol check)
+if(target.name === 'email'){
+
+  /*
+  if(!target.value.includes('@')){
+    target.setCustomValidity('Email can not be left blank.')
+  } else {
+    target.setCustomValidity('');
+  }
+    */
+
+  const yemailError = document.getElementById('emailError')
+  const emailPattern = /^[a-zA-Z0-9]+@[^\s@]+\.[a-zA-Z0-9]{2,}$/;
+  if(!emailPattern.test(target.value)){
+    const enteredEmail = target.value.trim();
+    //Below statement is showing static entry
+    //target.setCustomValidity('Please enter a valid email address.')
+
+    //below statement is showing dynamic response.
+    yemailError.textContent = 'Please fill the fullName field.'
+    target.setCustomValidity(`${enteredEmail} is not a valid entry. Please try again.`)
+
+  } else {
+    target.setCustomValidity('');
+        yemailError.textContent = ''
+
+    }
+    
+    //const enteredEmail = target.value.trim();
+    //enteredEmail.includes('@')?"" : `${enteredEmail} is not a valid entry. Please try again.`
+}
 
 // 1.4 report the validity status to the user
+target.reportValidity();
+
+}) 
+
+
+
+
+
+
   
