@@ -1,0 +1,28 @@
+{
+  "name": "lesson-13",
+  "version": "1.0.0",
+  "description": "This is node.js project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "Utility",
+    "javascript",
+    "helper"
+  ],
+  "author": "Rohit",
+  "contributors": [
+    "Mark",
+    "Dana"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.18"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
