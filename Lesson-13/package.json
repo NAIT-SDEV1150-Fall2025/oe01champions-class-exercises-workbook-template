@@ -20,6 +20,7 @@
   ],
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.6.2",
     "dayjs": "^1.11.18"
   },
   "devDependencies": {
