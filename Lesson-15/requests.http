@@ -1,0 +1,26 @@
+### GET all books
+GET http://localhost:3000/books
+Accept: application/json
+
+### POST new book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "Tales of the Triforce",
+  "author": "Impa",
+  "year": 2024,
+  "genre": "Lore"
+}
+
+
+### PATCH update a book
+PATCH http://localhost:3000/books/2
+Content-Type: application/json
+
+{
+  "author": "Link, the Hero of Time"
+}
+
+### DELETE a book
+DELETE http://localhost:3000/books/3
