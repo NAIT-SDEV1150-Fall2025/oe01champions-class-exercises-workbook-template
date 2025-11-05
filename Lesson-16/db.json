@@ -1,0 +1,53 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Legend of Hyrule",
+      "author": "Zelda",
+      "year": 2020,
+      "genre": "Fantasy"
+    },
+    {
+      "id": "2",
+      "title": "The Hero's Journey",
+      "author": "Link",
+      "year": 2022,
+      "genre": "Adventure"
+    },
+    {
+      "id": "3",
+      "title": "Chronicles of Ganon",
+      "author": "Ganondorf",
+      "year": 2021,
+      "genre": "Epic"
+    },
+    {
+      "id": "7d34",
+      "title": "SDEV1150",
+      "author": "Rohit",
+      "year": 2025,
+      "genre": "Epic"
+    },
+    {
+      "id": "a456",
+      "title": "CMIS1101",
+      "author": "Dana",
+      "year": 2024,
+      "genre": "Adventure"
+    },
+    {
+      "id": "a77b",
+      "title": "DATA2210",
+      "author": "Nathan",
+      "year": 2025,
+      "genre": "Fantasy"
+    },
+    {
+      "id": "3d9d",
+      "title": "DATA2210",
+      "author": "Nathan",
+      "year": 2025,
+      "genre": "Fantasy"
+    }
+  ]
+}
