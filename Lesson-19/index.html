@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 19 - Web Components</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <main>
+    <!-- Template here -->
+    <template id="user-card-template">
+      <style>
+          .card {
+          background: #fffff1;
+          color: #222222;
+          border: 1px solid #e6e6e6;
+          padding: 12px;
+          border-radius: 8px;
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          width: 320px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+        }
+      </style>
+      <div class="card">
+        <img src="" width="80" height="80" alt="avatar">
+        <div class="info">
+          <slot name="name" class="name"></slot>
+          <slot name="description" class="description"></slot>
+        </div>
+      </div>
+    </template>
+
+    <!-- Create user-cards here -->
+     <user-card avatar="/assets/zelda-avatar.png">
+      <span slot="name">Zelda</span>
+      <span slot="description">Princess of Hyrule</span>
+     <user-card></user-card>
+     </user-card>
+
+    <user-card avatar="/assets/link-avatar.png">
+    <span slot="name">Link</span>
+    <span slot="description">A true king</span>
+     </user-card>
+
+  </main>
+
+</body>
+
+</html>
