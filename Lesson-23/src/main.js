@@ -24,7 +24,7 @@ users.forEach((user) => {
 // declare a variable with initial value as 0 and then we will increment by listening to the custom event.
 let followedCount = 0;
 
-//listen on the container 'main'
+// listen on the container 'main'
 main.addEventListener('follow-change', (e) => {
   followedCount += e.detail.followed ? 1 : -1;
 
@@ -33,6 +33,9 @@ main.addEventListener('follow-change', (e) => {
   counterE1.textContent = `Followed: ${followedCount}`;
   console.log('Information about followed concept: ', e.detail);
 });
+
+// auto login mock up
+document.querySelector('user-card').follow();
 
 // Theme toggle button logic
 let dark = false;

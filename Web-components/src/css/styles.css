@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1024px;
+  margin: auto;
+}
+
+#category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: auto
+}
+:root {
+  
+}

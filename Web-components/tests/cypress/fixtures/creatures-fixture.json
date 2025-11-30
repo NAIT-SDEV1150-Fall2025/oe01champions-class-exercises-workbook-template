@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "category": "creatures",
+      "common_locations": [
+        "Hyrule Field",
+        "Faron Grasslands"
+      ],
+      "description": "These can most often be found on plains. Their usefulness as transportation has made them valuable since ancient times. That said, wild horses do tend to get spooked and run off when approached, so if you're looking to snag one, it's best to sneak up on it.",
+      "dlc": false,
+      "drops": [],
+      "edible": false,
+      "id": 1,
+      "image": "https://botw-compendium.herokuapp.com/api/v3/compendium/entry/horse/image",
+      "name": "horse"
+    },
+    {
+      "category": "creatures",
+      "common_locations": [
+        "Hyrule Field",
+        "Hyrule Ridge"
+      ],
+      "description": "These small creatures are known for their large tails. They tend to live in forests and subsist on acorns and other nuts. They carry their food in their mouths but will sometimes drop it when surprised in an adorable display of shock.",
+      "dlc": false,
+      "drops": [
+        "acorn"
+      ],
+      "edible": false,
+      "id": 9,
+      "image": "https://botw-compendium.herokuapp.com/api/v3/compendium/entry/bushy-tailed_squirrel/image",
+      "name": "bushy-tailed squirrel"
+    }
+  ]
+}

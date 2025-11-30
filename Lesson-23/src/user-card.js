@@ -63,13 +63,16 @@ class UserCard extends HTMLElement {
     this.#followed = false;
     // created user property that should help to set the values in the UI or front view.
     this.#user = false;
+    this._onButtonClick = this._onButtonClick.bind(this);
     const shadow = this.attachShadow({ mode: 'open' });
     const content = template.content.cloneNode(true);
     this._img = content.querySelector('img');
     // below line got commented out because we need to fetch the data from user property.
     // img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
     this._btn = content.querySelector('button');
-    this._btn.addEventListener('click', () => this._onFollow());
+
+    // Because we do not need event listeners in the constructor call because it is inititating the instance and not appended to DOM with details yet.
+    // this._btn.addEventListener('click', () => this._onFollow());
     shadow.appendChild(content);
   }
 
@@ -111,6 +114,31 @@ class UserCard extends HTMLElement {
     return this.#user;
   }
 
+  // Let's define onButtonClick method here.
+  _onButtonClick() {
+    this._setFollow(!this.#followed);
+  }
+
+  // lifecycle method -  connectedCallback
+  connectedCallback() {
+    // Attach the event listener.
+    this._btn.addEventListener('click', this._onButtonClick);
+
+    if (this.#user) {
+      this._renderFromUser();
+    } else {
+      const avatar = this.getAttribute('avatar');
+      if (avatar) {
+        this._img.src = avatar;
+      } else {
+        this._img.src = 'https://placehold.co/80x80/0077ff/ffffff';
+      }
+    }
+  }
+  disconnectedCallback() {
+    // clean up the listeners  or registered events.
+    this._btn.removeEventListener('click', this._onButtonClick);
+  }
 
   follow() {
     this._setFollow(true);

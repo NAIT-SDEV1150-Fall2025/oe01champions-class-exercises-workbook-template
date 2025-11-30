@@ -1,0 +1,28 @@
+{
+  "name": "assignment-3-auto-tests",
+  "version": "1.0.0",
+  "description": "Tests for assignment 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ../dist/",
+    "start-silent": "http-server ../dist/ -c-1 --silent",
+    "cypress:open": "cypress open",
+    "cypress:run-components": "cypress run --headless --spec=\"cypress/e2e/*test.cy.js\"",
+    "cypress:run-app": "cypress run --headless --spec=\"cypress/e2e/assignment-4-tests.cy.js\"",
+    "cypress:record": "cypress run --record --key",
+    "test:components": "start-server-and-test start-silent 8080 cypress:run-components",
+    "test:app": "start-server-and-test start-silent 8080 cypress:run-app",
+    "start-and-open": "start-server-and-test start-silent 8080 cypress:open"
+  },
+  "author": "Daniel Mouris, Nathan Humphrey",
+  "license": "ISC",
+  "dependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "cypress": "^12.17.0",
+    "cypress-real-events": "^1.15.0",
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "start-server-and-test": "^2.0.0"
+  }
+}
